@@ -17,10 +17,14 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "User can add feeds" do
+    user = users(:user)
     smittenfeed = Feed.new(url: 'http://feeds.feedburner.com/smittenkitchen',
                             user_id: user.id)
-    users(:user).feeds << smittenfeed
-    assert user.feeds.contains?(smittenfeed), "#{users[:user].name} can't see smittenfeed"
+    user.feeds << smittenfeed
+    user.save
+
+    assert user.feeds.include?(smittenfeed), "#{user.name} can't see smittenfeed"
+    # whaaaaaaat
   end
 
   test "User can see own feeds" do
