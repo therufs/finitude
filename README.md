@@ -5,7 +5,7 @@ We live in an era of endlessly available information, but there's still somethin
 
 Todo:
 Add user login & validations.
-Write user tests. 
+Write user tests.
 
 Status 7/14:
 Add Feedjira gem.

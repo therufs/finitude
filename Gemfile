@@ -12,9 +12,15 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
-gem 'spring',        group: :development
+gem 'spring',        group:  :development
+gem 'rspec',         group: [:development, :test]
+gem 'rspec-rails',   group: [:development, :test]
 
 gem 'feedjira'
+gem 'devise'
+gem 'omniauth-feedly',
+    git: 'https://github.com/silenceisgolden/omniauth-feedly.git'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
